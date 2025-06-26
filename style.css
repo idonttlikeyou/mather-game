@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: 'mojangles';
-  src: url('fonts/mojangles.ttf') format('truetype');
+  src: url('mojangles.ttf') format('truetype');
 }
 
 body {
