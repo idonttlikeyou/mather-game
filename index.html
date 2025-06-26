@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+    <div class="difficulty_input fade in" id="difficulty_input_div">
+    <h1 class="centered">Mather Game</h1>
+    <p class="centered">Made by: aldrich.a.w</p>
+    <p class="centered">Pilih Difficulty:
+    peaceful, easy, medium, demon, HARDCORE <br></p>
+    <label>Silahkan Ketik Difficulty:</label><br>
+    <input id="difficulty_input" placeholder="Ketik Disini!">
+    <button onclick="difficulty_submit()" id="difficulty_submit_button">Submit</button><br>
+    <button onclick="moreinfo()">More Info</button><br><br>
+    <div class="imsure">
+    <input type="checkbox" id="imsure">
+    <label style="position: relative; top: -2px;">Aku yakin dengan difficulty ini!</label>
+    </div>
+    </div>
+    <div style="transform: scale(3);">
+    <p class="fixedtoscreen centered hide" id="countdown3">3</p>
+    <p class="fixedtoscreen centered hide" id="countdown2">2</p>
+    <p class="fixedtoscreen centered hide" id="countdown1">1</p>
+    </div>
+    <br>
+    <div id="soaljawabanwaktudanskor">
+    <div class="nyawa centered greenbluegradient fade out" id="divnyawa">
+      <p>Nyawa: <span id="nyawa"></span> HP</p>
+    </div> <br>
+    <div class="waktu greenbluegradient floating centered fade out" id="waktu">
+      <p class="centered">Waktu tersisa: <span id="timeleft"></span> detik</p>
+    </div> <br>
+    <div class="soaldanjawaban greenbluegradient centered fade out" id="soaldanjawaban">
+      <p>Soal: <span id="soal"></span></p>
+      <label class="centered">Input Jawaban:</label><br>
+      <input id="answer" type="number" class="centered"><br><br>
+      <button onclick="submitanswer()" class="centered" id="kirim">Kirim Jawaban</button>
+      <p> <span id="message"></span> </p>
+    </div> <br>
+    <div class="centered score greenbluegradient fade out" id="skormanager">
+      <p>Score: <span id="score"></span></p>
+      <button onclick="simpanskor()" class="scorebuttons greenbluegradient" id="savescore">Simpan Skor</button><br>
+      <button onclick="gethighscore()" class="scorebuttons greenbluegradient" id="gethighscore">Dapatkan Skor Tertinggi! (sepanjang sejarah)</button>
+      <p id="opensesame!" class="hide">High Score:<br> <span id="highscoredisplay"></span></p>
+      <button onclick="hapussemuaskor()" id="lemparskorkealambarzah" class="lemparskorkekotaksampah redtext"></button><br>
+      <p id="pesan" class="centered"></p>
+    </div>
+    </div>
+    <div id="youdiedtext" class="hide">
+    <p class="whitetext centered youdied shadow">You Died!</p>
+    <p class="yellowtext centered shadow scoreheightcorrecter">Score: <span id="scoredisplay"></span></p>
+    </div>
+  </body>
+</html>

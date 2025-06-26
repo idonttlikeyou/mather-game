@@ -1,0 +1,356 @@
+#soaljawabanwaktudanskor {
+  pointer-events: none;
+}
+
+@font-face {
+  font-family: 'mojangles';
+  src: url('fonts/mojangles.ttf') format('truetype');
+}
+
+body {
+  font-family: 'mojangles', sans-serif;
+}
+
+button {
+  font-family: 'mojangles';
+}
+
+input {
+  font-family: 'mojangles';
+}
+
+.fade {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade.in {
+  opacity: 1;
+}
+
+.fade.out {
+  opacity: 0;
+}
+
+.difficulty_input {
+  background: linear-gradient(to bottom, #00ff66, #ff8833);
+  padding: 5px;
+  border: solid black 2px;
+  border-radius: 10px;
+  height: 290px;
+  width: 340px;
+}
+
+.yelloworangegradient {
+  background: linear-gradient(to top right, #ffaa00, #ffff00);
+}
+
+.redorangegradient {
+  background: linear-gradient(to bottom, #ffaa00, #ff2200);
+}
+
+.darkredgradient {
+  background: linear-gradient(to bottom, #ff2200, #aa1100);
+}
+
+.greenbluegradient {
+  background: linear-gradient(to bottom right, #00ff66, #00ffff);
+}
+
+.slightlyredbackground {
+  background: #ffaaaa;
+}
+
+.soaldanjawaban {
+  border: solid grey 2px;
+  border-radius: 7px;
+  height: 170px;
+  width: 350px;
+}
+
+.soaldanjawaban.lengthextension {
+  border: solid grey 2px;
+  border-radius: 7px;
+  height: 210px;
+  width: 350px;
+}
+
+.nyawa {
+  border: solid grey 2px;
+  border-radius: 8px;
+  width: 350px;
+  height: 50px;
+}
+
+.waktu {
+  border: solid grey 2px;
+  border-radius: 7px;
+  width: 350px;
+  height: 50px;
+}
+
+.score {
+  border: solid grey 2px;
+  border-radius: 7px;
+  width: 350px;
+}
+
+.youdied {
+  font-size: 28px;
+}
+
+.shadow {
+  text-shadow: 3px 3px 0 grey;
+}
+
+.imsure {
+  background-color: white;
+  border: solid black 2px;
+  border-radius: 2px;
+}
+
+.scorebuttons {
+  border-radius: 10px;
+}
+
+.lemparskorkekotaksampah {
+  background: linear-gradient(to bottom right, #000000, #444444);
+}
+
+.redtext {
+  color: red;
+}
+
+.yellowtext {
+  color: yellow;
+}
+
+.whitetext {
+  color: white;
+}
+
+.fixedtoscreen {
+  position: fixed;
+}
+
+.centered {
+  text-align: center;
+}
+
+.fixedtoscreen.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.hide {
+  opacity: 0;
+}
+
+.throwtoright {
+    animation: throwtoright 1s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.getfromleft {
+  animation: getfromleft 1s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.popscale {
+  animation: popscale 1s ease-out;
+  animation-fill-mode: forwards;
+}
+
+.shakex {
+  animation: shakeXwrong 0.5s ease-out;
+  animation-fill-mode: forwards;
+}
+
+.jump {
+  animation: jump 0.5s ease-out;
+  animation-fill-mode: forwards;
+}
+
+.blinkred {
+  animation: blinkred 1s ease-out;
+  animation-fill-mode: forwards;
+}
+
+.blinkgreen {
+  animation: blinkgreen 1s ease-out;
+  animation-fill-mode: forwards;
+}
+
+.floating {
+  animation: floating 4s ease-in-out infinite;
+}
+
+.go-up290px {
+  animation: go-up290px 1s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.goodnowtelleveryoneyourscore {
+  animation: goodnowtelleveryoneyourscore 1s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.youdiedcauseyouhittheceiling {
+  animation: youdiedcauseyouhittheceiling 1s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.youdiedupifhighscore {
+  animation: youdiedupifhighscore 0s;
+  animation-fill-mode: forwards;
+}
+
+.scoreheightcorrecter {
+  transform: translateY(-20px);
+}
+
+/*Keyframes*/
+
+@keyframes throwtoright {
+  0% {
+    transform: translateX(0);
+  }
+  33% {
+    transform: translateX(-20px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+}
+
+@keyframes getfromleft {
+  0% {
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  66% {
+    transform: translateX(20px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes popscale {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+  }
+  50% {
+    transform: translate(-50%, -50%)  scale(3);
+    opacity: 1;
+  }
+  75% {
+    transform: translate(-50%, -50%) scale(2);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes shakeXwrong {
+  0% {
+    transform: translateX(0px);
+  }
+  25% {
+    transform: translateX(-40px);
+  }
+  50% {
+    transform: translateX(30px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0px);
+  }
+  5% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes blinkred {
+  0% {
+    background-color: #ff7777;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+@keyframes blinkgreen {
+  0% {
+    background-color: #22ff55;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(-2px);
+  }
+  50% {
+    transform: translateY(2px);
+  }
+  100% {
+    transform: translateY(-2px);
+  }
+}
+
+@keyframes go-up290px {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-290px);
+  }
+}
+
+@keyframes goodnowtelleveryoneyourscore {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-290px);
+  }
+}
+
+@keyframes youdiedcauseyouhittheceiling {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-880px);
+  }
+}
+
+@keyframes youdiedupifhighscore {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-900px);
+  }
+}
